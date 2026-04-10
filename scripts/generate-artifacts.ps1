@@ -69,6 +69,7 @@ $resourcesTemplateURL = "$($blob.ICloudBlob.uri.AbsoluteUri)?$resourcesTemplateS
 
 # updating artifacts config
 Write-Output "Updating artifacts config"
+# Persist the generated artifact URL so validate-artifacts.ps1 can load it later.
 $artifactsConfig = @{
     resourcesTemplate = "$resourcesTemplateURL"
 }
